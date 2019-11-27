@@ -589,6 +589,21 @@ void game::toggle_panel_adm()
     show_panel_adm = !show_panel_adm;
 }
 
+void game::debug_tileset_report()
+{
+#if defined(TILES)
+    dbg( D_INFO ) << "debug_tileset_report begin";
+    try {
+        tilecontext->reinit();
+        tilecontext->load_tileset( get_option<std::string>( "TILES" ), false, true );
+        tilecontext->do_tileset_debug_report();
+    } catch( const std::exception &err ) {
+        popup( _( "Loading the tileset failed: %s" ), err.what() );
+    }
+    dbg( D_INFO ) << "debug_tileset_report end";
+#endif // TILES
+}
+
 void game::reload_tileset()
 {
 #if defined(TILES)

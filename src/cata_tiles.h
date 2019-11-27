@@ -473,6 +473,7 @@ class cata_tiles
             return tile_ratioy;
         }
         void do_tile_loading_report();
+        void do_tileset_debug_report();
         point player_to_screen( const point & ) const;
         static std::vector<options_manager::id_and_option> build_renderer_list();
     protected:

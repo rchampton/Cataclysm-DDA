@@ -148,7 +148,8 @@ enum debug_menu_index {
     DEBUG_DISPLAY_LIGHTING,
     DEBUG_DISPLAY_RADIATION,
     DEBUG_LEARN_SPELLS,
-    DEBUG_LEVEL_SPELLS
+    DEBUG_LEVEL_SPELLS,
+    DEBUG_TILESET_REPORT
 };
 
 class mission_debug
@@ -216,6 +217,7 @@ static int info_uilist( bool display_all_entries = true )
             { uilist_entry( DEBUG_PRINT_FACTION_INFO, true, 'f', _( "Print faction info to console" ) ) },
             { uilist_entry( DEBUG_PRINT_NPC_MAGIC, true, 'M', _( "Print NPC magic info to console" ) ) },
             { uilist_entry( DEBUG_TEST_WEATHER, true, 'W', _( "Test weather" ) ) },
+            { uilist_entry( DEBUG_TILESET_REPORT, true, 'x', _( "Generate tileset report" ) ) },
         };
         uilist_initializer.insert( uilist_initializer.begin(), debug_only_options.begin(),
                                    debug_only_options.end() );
@@ -1620,6 +1622,19 @@ void debug()
             popup( popup_msg );
         }
         break;
+
+        case DEBUG_TILESET_REPORT: {
+            popup( _( "Generating tileset report" ) );
+            // g->reload_tileset();
+            // g->tilecontext->reinit();
+            std::string tilesOption = get_option<std::string>( "TILES" );
+            DebugLog( DL_ALL, DC_ALL ) << " TILESET REPORT:\n\ttilesOption " << tilesOption;
+            // g->reload_tileset();
+            g->debug_tileset_report();
+            DebugLog( DL_ALL, DC_ALL ) << " TILESET REPORT END";
+        }
+        break;
+
         case DEBUG_LEARN_SPELLS:
             if( spell_type::get_all().empty() ) {
                 add_msg( m_bad, _( "There are no spells to learn.  You must install a mod that adds some." ) );

@@ -3449,6 +3449,43 @@ void cata_tiles::get_tile_values( const int t, const int *tn, int &subtile, int 
     get_rotation_and_subtile( val, rotation, subtile );
 }
 
+/*
+void cata_tiles::do_tileset_debug_report()
+{
+    DebugLog( D_INFO, DC_ALL ) << "do_tileset_debug_report called";
+}
+*/
+
+void cata_tiles::do_tileset_debug_report()
+{
+    DebugLog( D_INFO, DC_ALL ) << "do_tileset_report Loaded tileset: " <<
+                               get_option<std::string>( "TILES" );
+
+    if( !g->is_core_data_loaded() ) {
+        return; // There's nothing to do anymore without the core data.
+    }
+
+    tile_loading_report<ter_t>( ter_t::count(), "Terrain", "" );
+    tile_loading_report<furn_t>( furn_t::count(), "Furniture", "" );
+
+    std::map<itype_id, const itype *> items;
+    for( const itype *e : item_controller->all() ) {
+        items.emplace( e->get_id(), e );
+    }
+    tile_loading_report( items, "Items", "" );
+
+    auto mtypes = MonsterGenerator::generator().get_all_mtypes();
+    lr_generic( mtypes.begin(), mtypes.end(), []( const std::vector<mtype>::iterator & m ) {
+        return ( *m ).id.str();
+    }, "Monsters", "" );
+    tile_loading_report( vpart_info::all(), "Vehicle Parts", "vp_" );
+    tile_loading_report<trap>( trap::count(), "Traps", "" );
+    tile_loading_report<field_type>( field_type::count(), "Field Types", "" );
+
+    // needed until DebugLog ostream::flush bugfix lands
+    DebugLog( D_INFO, DC_ALL );
+}
+
 void cata_tiles::do_tile_loading_report()
 {
     DebugLog( D_INFO, DC_ALL ) << "Loaded tileset: " << get_option<std::string>( "TILES" );
