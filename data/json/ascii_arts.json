@@ -946,5 +946,86 @@
       "  ██████████                             ",
       "                                         "
     ]
+  },
+  {
+    "type": "ascii_art",
+    "id": "hammer",
+    "picture": [
+      "                                         ",
+      "          <color_white>▄▄▄▄▄▄▄▄                       ",
+      "       ▄████▀                            ",
+      "     ▄█▒██▒                              ",
+      "    ▄█████▒                              ",
+      " ████▀  ▀███▄                            ",
+      "  ▀██     ▀██</color><color_brown>█▄                          ",
+      "            ████▄                        ",
+      "             ▀████▄                      ",
+      "              ▀█████▄                    ",
+      "                ▀█████▄                  ",
+      "                  ▀█████▄                ",
+      "                    ▀████▓               ",
+      "                      ▀██◛▓              ",
+      "                        ▀▀▀              ",
+      "                                         "
+    ]
+  },
+  {
+    "type": "ascii_art",
+    "id": "pliers",
+    "picture": [
+      "                                         ",
+      "      <color_white>█{▓                                ",
+      "     █} {▓                               ",
+      "    ██} {█▓                              ",
+      "   ██}   {█▓                             ",
+      "   ███} {██▓                             ",
+      "   ███▌ ▐██▓                             ",
+      "   ████◙███▓                             ",
+      "   ████████▓                             ",
+      "    ██████▓                              ",
+      "     ████▓                               ",
+      "      ██▓                                ",
+      "    ███ ██▓                              ",
+      "   ██     █▓                             ",
+      "   </color><color_dark_gray>█▓     █▓                             ",
+      "  </color><color_yellow>██</color><color_dark_gray>▓     █</color><color_yellow>█▓                            ",
+      "  ██</color><color_dark_gray>▓     █</color><color_yellow>█▓                            ",
+      " </color><color_dark_gray>██▓       ██▓                           ",
+      " </color><color_yellow>██</color><color_dark_gray>▓       █</color><color_yellow>█▓                           ",
+      " </color><color_dark_gray>██▓       ██▓                           ",
+      " ██▓       ██▓                           ",
+      " </color><color_yellow>██</color><color_dark_gray>▓       █</color><color_yellow>█▓                           ",
+      " ██</color><color_dark_gray>▓       █</color><color_yellow>█▓                           ",
+      " </color><color_dark_gray>██▓       ██▓                           ",
+      "  </color><color_yellow>██</color><color_dark_gray>▓     █</color><color_yellow>█▓                            ",
+      "  </color><color_dark_gray>██▓     ██▓                            ",
+      "   </color><color_yellow>██</color><color_dark_gray>▓   █</color><color_yellow>█▓                             ",
+      "   </color><color_dark_gray>██▓   ██▓                             ",
+      "                                         "
+    ]
+  },
+  {
+    "type": "ascii_art",
+    "id": "scissors",
+    "picture": [
+      "                                         ",
+      "                <color_white>█                        ",
+      "                ░█                       ",
+      "                ░█                       ",
+      "                ░█                       ",
+      "                ░█▌                      ",
+      "                ░█▌      </color><color_dark_gray>████            ",
+      "                </color><color_white>░██     </color><color_dark_gray>█    █           ",
+      "               </color><color_white>▄███    </color><color_dark_gray>█     █           ",
+      "  </color><color_white>▄▄▄▄▄▄█████████◙█████</color><color_dark_gray>██████            ",
+      "                 </color><color_white>██                      ",
+      "                 ██                      ",
+      "               </color><color_dark_gray>███▌                      ",
+      "              █  █                       ",
+      "             █   █                       ",
+      "             █   █                       ",
+      "              ███                        ",
+      "                                         "
+    ]
   }
 ]
