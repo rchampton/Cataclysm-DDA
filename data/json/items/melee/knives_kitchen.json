@@ -142,7 +142,7 @@
     "type": "TOOL",
     "category": "weapons",
     "description": "This is a menacing looking knife with a broad, square shaped blade.  Its heft and sharpness would make it a very effective melee weapon, and an excellent butchering tool.",
-    "ascii_picture": "knife_meatcleaver",
+    "ascii_picture": "knife_meat_cleaver",
     "copy-from": "base_kitchen_knife",
     "looks_like": "knife_butcher",
     "weight": "350 g",
