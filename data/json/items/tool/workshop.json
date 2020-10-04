@@ -777,6 +777,7 @@
     "type": "TOOL",
     "name": { "str": "screwdriver set" },
     "description": "This is a set of screwdrivers in several sizes and blade types.  Guaranteed to have the right tools for more precise work.",
+    "ascii_picture": "screwdriver_set",
     "weight": "340 g",
     "volume": "500 ml",
     "price": 2000,
