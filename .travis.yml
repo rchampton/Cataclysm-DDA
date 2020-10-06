@@ -26,8 +26,7 @@ os: linux
 # This re-enables just the master branch.
 branches:
   only:
-  - master
-  - development
+  - dev
 
 # Overall strategy for what sorts of builds to include:
 # We want a build for each compiler and each platform.
